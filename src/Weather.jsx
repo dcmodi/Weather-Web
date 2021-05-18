@@ -10,7 +10,7 @@ const Weather = () => {
   var [search, setSearch] = useState("Ahmedabad");
   useEffect(async () => {
     try {
-      var url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_KEY}`;
+      var url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_KEY}`;
       var data = await axios.get(url);
       if (data.status === 404) {
         throw "404 Error";
