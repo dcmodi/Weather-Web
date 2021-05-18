@@ -17,7 +17,7 @@ const Weather = () => {
       }
       if (data.status === 200) {
         await setWeather(() => {
-          console.log(data.data);
+          //console.log(data.data);
           return data.data;
         });
       }
@@ -47,7 +47,7 @@ const Weather = () => {
       {temp.weather ? (
         <>
           <div className="card">
-            <div className="ml-4 pt-4">
+            <div className="m-4">
               <h3>{`${temp.name},${temp.sys.country}`}</h3>
               <p className="mt-1 font">
                 {`Current Temperature: ${(temp.main.temp - 273.15).toFixed(2)}`}
